@@ -51,7 +51,7 @@ A API ficará disponível em `http://localhost:3000`.
 
 ```json
 {
-  "text": "Texto que será resumido pela LLM..."
+	"text": "Texto que será resumido pela LLM..."
 }
 ```
 
@@ -59,7 +59,7 @@ Resposta:
 
 ```json
 {
-  "summary": "Resumo gerado pela LLM..."
+	"summary": "Resumo gerado pela LLM..."
 }
 ```
 
