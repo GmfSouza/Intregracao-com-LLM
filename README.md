@@ -23,8 +23,8 @@ O provider padrão é Ollama:
 
 ```env
 LLM_PROVIDER=ollama
-OLLAMA_URL=http://localhost:11434
-OLLAMA_MODEL=llama3.2
+OLLAMA_BASE_URL=http://localhost:11434
+OLLAMA_MODEL=llama3
 PORT=3000
 ```
 
@@ -36,6 +36,16 @@ OPENAI_API_KEY=sua-chave
 OPENAI_MODEL=gpt-4o-mini
 PORT=3000
 ```
+
+A chave `OPENAI_API_KEY` precisa ser criada na sua conta OpenAI e preenchida manualmente. Ela não deve ser
+versionada nem compartilhada. Para testar OpenAI, altere somente `LLM_PROVIDER` no `.env` depois de preencher
+essa chave:
+
+```env
+LLM_PROVIDER=openai
+```
+
+Enquanto `LLM_PROVIDER=ollama`, a aplicação não faz nenhuma requisição para a OpenAI.
 
 ## Execução
 
