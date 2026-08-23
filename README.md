@@ -1,6 +1,6 @@
 # EssenciaAPI
 
-API REST em Node.js e TypeScript para gerar resumos usando OpenAI, Ollama ou Google AI Studio.
+API REST em Node.js e TypeScript para gerar resumos usando LLMs locais (Ollama) ou em nuvem (OpenAI e Google AI Studio).
 
 ## Requisitos
 
