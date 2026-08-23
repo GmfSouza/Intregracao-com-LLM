@@ -1,6 +1,6 @@
 # LLM Integration API
 
-API REST em Node.js e TypeScript para gerar resumos usando OpenAI ou Ollama.
+API REST em Node.js e TypeScript para gerar resumos usando OpenAI, Ollama ou Google AI Studio.
 
 ## Requisitos
 
@@ -49,8 +49,7 @@ PORT=3000
 A chave do Google AI Studio deve ser criada no Google AI Studio e preenchida manualmente. Enquanto o provider
 estiver configurado como `ollama`, nenhuma chamada será feita para Google ou OpenAI.
 
-A chave `OPENAI_API_KEY` precisa ser criada na sua conta OpenAI e preenchida manualmente. Ela não deve ser
-versionada nem compartilhada. Para testar OpenAI, altere somente `LLM_PROVIDER` no `.env` depois de preencher
+A chave `OPENAI_API_KEY` precisa ser criada na sua conta OpenAI e preenchida manualmente. Para testar OpenAI, altere somente `LLM_PROVIDER` no `.env` depois de preencher
 essa chave:
 
 ```env
