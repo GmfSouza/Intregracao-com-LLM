@@ -19,10 +19,7 @@ function createProvider() {
 	}
 
 	if (provider === "ollama") {
-		return new OllamaProvider(
-			process.env.OLLAMA_URL ?? "http://localhost:11434",
-			process.env.OLLAMA_MODEL ?? "llama3.2",
-		);
+		return new OllamaProvider();
 	}
 
 	throw new Error(`Unsupported LLM_PROVIDER: ${provider}`);
