@@ -37,6 +37,18 @@ OPENAI_MODEL=gpt-4o-mini
 PORT=3000
 ```
 
+Para Google AI Studio:
+
+```env
+LLM_PROVIDER=google
+GOOGLE_AI_API_KEY=sua-chave-do-google-ai-studio
+GOOGLE_AI_MODEL=gemini-2.5-flash-lite
+PORT=3000
+```
+
+A chave do Google AI Studio deve ser criada no Google AI Studio e preenchida manualmente. Enquanto o provider
+estiver configurado como `ollama`, nenhuma chamada será feita para Google ou OpenAI.
+
 A chave `OPENAI_API_KEY` precisa ser criada na sua conta OpenAI e preenchida manualmente. Ela não deve ser
 versionada nem compartilhada. Para testar OpenAI, altere somente `LLM_PROVIDER` no `.env` depois de preencher
 essa chave:
@@ -54,6 +66,8 @@ npm run dev
 ```
 
 A API ficará disponível em `http://localhost:3000`.
+
+A interface web fica disponível em `http://localhost:3000` e consome o endpoint de resumo diretamente.
 
 ## Endpoint
 
