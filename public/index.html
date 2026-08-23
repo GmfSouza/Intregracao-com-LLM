@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Resuma textos com inteligência artificial."
+		/>
+		<title>essência | Resumos com IA</title>
+        <link rel="icon" type="image/png" href="assets/icon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="page-shell">
+			<header class="topbar">
+				<a class="brand" href="/" aria-label="Essência, página inicial">
+					<span class="brand-mark" aria-hidden="true">e</span>
+					<span>essência</span>
+				</a>
+				<div class="provider-status">
+					<span class="status-dot" aria-hidden="true"></span
+					><span>motor local ativo</span>
+				</div>
+			</header>
+
+			<main class="main-content">
+				<section class="intro" aria-labelledby="page-title">
+					<p class="eyebrow">síntese inteligente <span>/</span> 01</p>
+					<h1 id="page-title">Menos ruído.<br /><em>Mais essência.</em></h1>
+					<p class="intro-copy">
+						Transforme textos longos em ideias claras, preservando o que
+						realmente importa.
+					</p>
+				</section>
+
+				<section class="workspace" aria-label="Ferramenta de resumo">
+					<div class="panel input-panel">
+						<div class="panel-heading">
+							<div>
+								<span class="panel-number">01</span>
+								<h2>Seu texto</h2>
+							</div>
+							<span class="field-hint">até 15.000 caracteres</span>
+						</div>
+						<label class="sr-only" for="source-text">Texto para resumir</label>
+						<textarea
+							id="source-text"
+							maxlength="15000"
+							placeholder="Cole aqui o artigo, anotação ou ideia que você quer condensar..."
+						></textarea>
+						<div class="panel-footer">
+							<span
+								><span id="character-count">0 / 15.000</span>
+								<span aria-hidden="true">·</span>
+								<span id="input-word-count">0 palavras</span></span
+							>
+							<button
+								class="primary-button"
+								id="summarize-button"
+								type="button"
+							>
+								<span>Gerar resumo</span
+								><span class="button-arrow" aria-hidden="true">&#8599;</span>
+							</button>
+						</div>
+					</div>
+
+					<div class="panel output-panel" aria-live="polite">
+						<div class="panel-heading">
+							<div>
+								<span class="panel-number">02</span>
+								<h2>Essência</h2>
+							</div>
+							<button
+								class="copy-button"
+								id="copy-button"
+								type="button"
+								disabled
+								title="Copiar resumo"
+							>
+								<span aria-hidden="true">&#10697;</span> copiar
+							</button>
+						</div>
+						<div class="result-area" id="result-area">
+							<div class="empty-state" id="empty-state">
+								<span class="empty-symbol" aria-hidden="true">✦</span>
+								<p>Seu resumo aparece aqui.</p>
+								<span>A clareza está a um clique.</span>
+							</div>
+							<p class="summary-text" id="summary-text"></p>
+							<div class="loading-state" id="loading-state" hidden>
+								<span></span><span></span><span></span>
+								<p>lendo entrelinhas...</p>
+							</div>
+							<div class="error-state" id="error-state" hidden></div>
+						</div>
+						<div class="result-meta" id="result-meta" hidden>
+							<span>resumo pronto</span><span id="word-count"></span>
+						</div>
+					</div>
+				</section>
+
+				<p class="privacy-note">
+					<span aria-hidden="true">◌</span> Seu texto é enviado apenas ao
+					provedor configurado no projeto.
+				</p>
+			</main>
+
+			<footer class="footer">
+				<span>feito para pensar melhor</span
+				><span
+					>API REST <span class="footer-slash">/</span> Node + TypeScript</span
+				>
+			</footer>
+		</div>
+		<script src="app.js" defer></script>
+	</body>
+</html>
