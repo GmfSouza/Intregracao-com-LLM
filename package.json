@@ -1,0 +1,26 @@
+{
+	"name": "llm-integration-api",
+	"version": "1.0.0",
+	"private": true,
+	"description": "REST API for text summarization with OpenAI and Ollama providers",
+	"main": "dist/server.js",
+	"scripts": {
+		"dev": "tsx watch src/server.ts",
+		"build": "tsc",
+		"start": "node dist/server.js",
+		"test": "node --test"
+	},
+	"dependencies": {
+		"@google/genai": "^2.18.0",
+		"dotenv": "^16.4.7",
+		"express": "^5.1.0",
+		"openai": "^5.12.2",
+		"zod": "^3.25.76"
+	},
+	"devDependencies": {
+		"@types/express": "^5.0.3",
+		"@types/node": "^24.3.0",
+		"tsx": "^4.20.3",
+		"typescript": "^5.9.2"
+	}
+}
