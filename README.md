@@ -1,4 +1,4 @@
-# LLM Integration API
+# EssenciaAPI
 
 API REST em Node.js e TypeScript para gerar resumos usando OpenAI, Ollama ou Google AI Studio.
 
