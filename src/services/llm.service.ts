@@ -1,7 +1,8 @@
 import type { LLMProvider } from "../providers/llm.provider.js";
 
 export class LLMService {
-	constructor(private readonly provider: LLMProvider) {
+	private readonly provider: LLMProvider;
+	constructor(provider: LLMProvider) {
 		this.provider = provider;
 	}
 
